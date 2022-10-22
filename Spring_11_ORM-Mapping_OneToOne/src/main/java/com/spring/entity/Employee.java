@@ -20,8 +20,10 @@ public class Employee extends BaseEntity{
     private String email;
     @Column(columnDefinition = "DATE")
     private LocalDate hireDate;
-//    @Column(length = 17)
-//    private String department;
+
+    @OneToOne
+    @JoinColumn(name = "department")
+    private Department department;
     @Enumerated(EnumType.ORDINAL)
     private Gender gender;
     private  int salary;

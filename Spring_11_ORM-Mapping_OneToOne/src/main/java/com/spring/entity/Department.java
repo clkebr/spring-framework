@@ -4,10 +4,7 @@ package com.spring.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "departments")
@@ -18,6 +15,9 @@ public class Department extends BaseEntity {
     private String department;
     @Column(length = 100)
     private String division;
+
+    @OneToOne(mappedBy = "department")
+    private Employee employee;
 
     public Department(String department, String division) {
         this.department = department;
