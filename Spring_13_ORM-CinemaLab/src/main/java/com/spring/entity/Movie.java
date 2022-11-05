@@ -1,4 +1,5 @@
 package com.spring.entity;
+
 import com.spring.enums.MovieState;
 import com.spring.enums.MovieType;
 import lombok.Data;
