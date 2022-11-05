@@ -3,7 +3,9 @@ package com.spring.entity;
 import com.spring.enums.MovieState;
 import com.spring.enums.MovieType;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -12,13 +14,27 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter @Setter
 public class Movie extends  BaseEntity{
 
     private String name;
     @Column(columnDefinition = "DATE")
     private LocalDate releaseDate;
     private Integer duration;
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "name='" + name + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", duration=" + duration +
+                ", summary='" + summary + '\'' +
+                ", type=" + type +
+                ", state=" + state +
+                ", price=" + price +
+                '}';
+    }
+
     @Column(columnDefinition = "text")
     private String summary;
     @Enumerated(EnumType.STRING)
