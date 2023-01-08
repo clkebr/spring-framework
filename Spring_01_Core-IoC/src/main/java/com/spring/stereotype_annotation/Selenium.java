@@ -1,6 +1,4 @@
-package com.cydeo.stereotype_annotation;
-
-import org.springframework.stereotype.Component;
+package com.spring.stereotype_annotation;
 
 
 public class Selenium {

@@ -1,4 +1,4 @@
-package com.cydeo.stereotype_annotation;
+package com.spring.stereotype_annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

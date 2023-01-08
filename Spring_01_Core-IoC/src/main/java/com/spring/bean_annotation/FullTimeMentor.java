@@ -1,4 +1,4 @@
-package com.cydeo.bean_annotation;
+package com.spring.bean_annotation;
 
 public class FullTimeMentor {
 
